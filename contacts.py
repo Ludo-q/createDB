@@ -10,7 +10,8 @@ cursor.execute('SELECT * FROM contacts')
 
 # print(cursor.fetchall())
 print(cursor.fetchone())
-print('*' * 30)
+print(cursor.fetchone())
+print(cursor.fetchone())
 
 for name, phone, email in cursor:
     print(name)
@@ -19,4 +20,5 @@ for name, phone, email in cursor:
     print('=' * 30)
 
 cursor.close()
+db.commit()
 db.close()
